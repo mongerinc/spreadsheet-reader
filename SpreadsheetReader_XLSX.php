@@ -630,7 +630,11 @@
 			{
 				return $this -> GeneralFormat($Value);
 			}
-
+			//text format
+			else if ($Index == 49)
+			{
+				return $Value;
+			}
 			$Format = array();
 
 			if (isset($this -> ParsedFormatCache[$Index]))
@@ -924,11 +928,6 @@
 		 */
 		public function GeneralFormat($Value)
 		{
-			// Numeric format
-			if (is_numeric($Value))
-			{
-				$Value = (float)$Value;
-			}
 			return $Value;
 		}
 
