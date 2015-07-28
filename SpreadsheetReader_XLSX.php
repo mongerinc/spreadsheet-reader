@@ -928,9 +928,24 @@
 		 */
 		public function GeneralFormat($Value)
 		{
+			if ($this->shouldFloat($Value))
+				return (float) $Value;
+
 			return $Value;
 		}
 
+		/**
+		 * determines if the given value should be casted as a float
+		 *
+		 * @param  string    $value
+		 *
+		 * @return boolean
+		 */
+		public function shouldFloat($value)
+		{
+			return is_numeric($value) && substr($value, 0, 1) != '0';
+		}
+		
 		// !Iterator interface methods
 		/** 
 		 * Rewind the Iterator to the first element.
