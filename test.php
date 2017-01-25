@@ -71,10 +71,10 @@
 					var_dump($Row);
 				}
 				$CurrentMem = memory_get_usage();
-		
+
 				echo 'Memory: '.($CurrentMem - $BaseMem).' current, '.$CurrentMem.' base'.PHP_EOL;
 				echo '---------------------------------'.PHP_EOL;
-		
+
 				if ($Key && ($Key % 500 == 0))
 				{
 					echo '---------------------------------'.PHP_EOL;
@@ -82,7 +82,7 @@
 					echo '---------------------------------'.PHP_EOL;
 				}
 			}
-		
+
 			echo PHP_EOL.'---------------------------------'.PHP_EOL;
 			echo 'Time: '.(microtime(true) - $Time);
 			echo PHP_EOL;
@@ -91,9 +91,9 @@
 			echo '*** End of sheet '.$Name.' ***'.PHP_EOL;
 			echo '---------------------------------'.PHP_EOL;
 		}
-		
+
 	}
-	catch (Exception $E)
+	catch (Throwable $E)
 	{
 		echo $E -> getMessage();
 	}
