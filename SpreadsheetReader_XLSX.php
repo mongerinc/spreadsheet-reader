@@ -858,7 +858,7 @@
 							$GCD = self::GCD($Decimal, $DecimalDivisor);
 						}
 
-						$AdjDecimal = $DecimalPart/$GCD;
+						$AdjDecimal = $Decimal/$GCD;
 						$AdjDecimalDivisor = $DecimalDivisor/$GCD;
 
 						if (
